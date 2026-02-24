@@ -383,7 +383,7 @@ header {
 .trabajos-grid {
   display: grid;
   grid-template-columns: 1fr;   /* 1 columna en mobile */
-  gap: 14px;
+  gap: 60px;
 }
 
 /* Card base */
@@ -426,5 +426,80 @@ header {
   .trabajo-card img,
   .trabajo-card video {
     height: 280px;
+  }
+
+
+
+  /* -----------------------------botones---------------------------------- */
+
+  /* =========================
+   BOTONES DEL CARRUSEL
+========================= */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.7);
+  border: 2px solid rgb(255, 212, 0);
+  color: rgb(255, 212, 0);
+  width: 56px;      /* 👈 tamaño del botón */
+  height: 56px;     /* 👈 tamaño del botón */
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 32px;  /* 👈 tamaño de la flecha */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* En móvil: más grandes para tocar fácil */
+@media (max-width: 480px) {
+  .carousel-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 34px;
+  }
+}
+/* ---------------------------botones------------------------ */
+
+/* =========================
+   BOTONES DEL CARRUSEL
+========================= */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.7);
+  border: 2px solid rgb(255, 212, 0);
+  color: rgb(255, 212, 0);
+  width: 76px;      /* tamaño del botón */
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 100px;  /* tamaño de la flecha */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* En móvil: aún más grandes */
+@media (max-width: 480px) {
+  .carousel-btn {
+    width: 64px;
+    height: 64px;
+    font-size: 36px;
   }
 }
