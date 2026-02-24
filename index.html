@@ -1,342 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coneja Producciones | Cartelería y Gráfica en Catamarca</title>
-<!-- SEO Básico -->
-<meta name="description" content="Coneja Producciones. Cartelería, gráfica, señalética, impresión y trabajos en vinilo, acrílico, lona y LED en Catamarca. Diseño moderno y soluciones visuales para tu negocio.">
-<meta name="keywords" content="cartelería, gráfica, vinilo, acrílico, lona, LED, impresión, señalética, Coneja Producciones, Catamarca">
-<meta name="author" content="Coneja Producciones">
-<meta name="robots" content="index, follow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Open Graph (para compartir en redes) -->
-<meta property="og:title" content="Coneja Producciones | Cartelería y Gráfica">
-<meta property="og:description" content="Cartelería, gráfica y soluciones visuales. Vinilo, acrílico, lona y LED. Mirá nuestros trabajos.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://TUUSUARIO.github.io/conejaproducciones/">
-<meta property="og:image" content="https://TUUSUARIO.github.io/conejaproducciones/media/logo.png">
+  <title>Coneja Producciones | Cartelería y Gráfica en Catamarca</title>
 
-<!-- Twitter Card (opcional, pero suma) -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Coneja Producciones | Cartelería y Gráfica">
-<meta name="twitter:description" content="Cartelería, gráfica y soluciones visuales. Vinilo, acrílico, lona y LED.">
-<meta name="twitter:image" content="https://TUUSUARIO.github.io/conejaproducciones/media/img-logo.png">
+  <!-- SEO -->
+  <meta name="description" content="Coneja Producciones. Cartelería, gráfica y soluciones visuales en Catamarca.">
+  <meta property="og:title" content="Coneja Producciones | Cartelería y Gráfica">
+  <meta property="og:description" content="Cartelería, vinilo, acrílico, lona y LED. Descubrí nuestros trabajos y contactanos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gonzalo-dev-ar.github.io/conejaProducciones/">
+  <meta property="og:image" content="https://gonzalo-dev-ar.github.io/conejaProducciones/media/img-logo.png">
+  <meta property="og:image:alt" content="Logo Coneja Producciones">
 
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Coneja Producciones | Cartelería y Gráfica">
+  <meta name="twitter:description" content="Cartelería, vinilo, acrílico, lona y LED.">
+  <meta name="twitter:image" content="https://gonzalo-dev-ar.github.io/conejaProducciones/media/img-logo.png">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- --------------------------------------------------------- -->
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html lang="es">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Coneja Producciones</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
+  <!-- BOTÓN MENÚ -->
+  <button class="menu-btn" aria-label="Abrir menú">☰</button>
 
-    <body>
+  <!-- OVERLAY MENÚ -->
+  <div class="menu-overlay" id="menuOverlay">
+    <button class="menu-close" aria-label="Cerrar menú">✕</button>
+    <nav class="menu-nav">
+      <a href="#">Inicio</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#materiales">Materiales</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
 
-        <!-- HERO CON VIDEO -->
-        <header <!-- Botón menú -->
-            <button class="menu-btn" aria-label="Abrir menú">☰</button>
+  <!-- HERO -->
+  <header class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="media/hero.mp4.1.mp4" type="video/mp4">
+      Tu navegador no soporta video.
+    </video>
 
-            <!-- Overlay del menú -->
-            <div class="menu-overlay" id="menuOverlay">
-                <button class="menu-close" aria-label="Cerrar menú">✕</button>
-                <nav class="menu-nav">
-                    <a href="#">Inicio</a>
-                    <a href="#trabajos">Trabajos</a>
-                    <a href="#materiales">Materiales</a>
-                    <a href="#contacto">Contacto</a>
-                </nav>
-            </div>
+    <div class="hero-overlay"></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-            class="hero">
-            <video class="hero-video" autoplay muted loop playsinline>
-                <source src="media/hero.mp4.1.mp4" type="video/mp4">
-                Tu navegador no soporta video.
-            </video>
-
-            <div class="hero-overlay"></div>
-
-            <div class="hero-content">
-                <h1>Coneja Producciones</h1>
-                <p>Cartelería • Gráfica • Señalética • Impresión</p>
-                <div class="hero-buttons">
-                    <a href="#trabajos" class="btn primary">Ver trabajos</a>
-                    <a href="#contacto" class="btn secondary">Contactanos</a>
-                </div>
-            </div>
-        </header>
-
-        <section id="trabajos" class="section">
-            <h2>Trabajos</h2>
-            <p>Algunos de nuestros trabajos recientes.</p>
-
-            <div class="grid gallery">
-                <div class="card">
-                    <img src="media/trabajo1.jpg" alt="Trabajo 1">
-                </div>
-                <!-- Si querés agregar más imágenes, copiá este bloque y cambiá el nombre -->
-                <!--
-    <div class="card">
-      <img src="media/trabajo2.jpg" alt="Trabajo 2">
+    <div class="hero-content">
+      <h1>Coneja Producciones</h1>
+      <p>Cartelería • Gráfica • Señalética • Impresión</p>
+      <div class="hero-buttons">
+        <a href="#trabajos" class="btn primary">Ver trabajos</a>
+        <a href="#contacto" class="btn secondary">Contactanos</a>
+      </div>
     </div>
-    -->
-            </div>
-        </section>
+  </header>
 
-        <section id="trabajos" class="section">
-            <h2>Trabajos</h2>
-            <p>Algunos de nuestros trabajos recientes.</p>
+  <!-- TRABAJOS / CARRUSEL -->
+  <section id="trabajos" class="section">
+    <h2>Trabajos</h2>
+    <p>Algunos de nuestros trabajos recientes.</p>
 
-            <div class="grid gallery">
-                <div class="card">
-                    <video src="media/trabajao3.mp4" autoplay muted loop playsinline></video>
-                </div>
-                <!-- Si querés agregar más imágenes, copiá este bloque y cambiá el nombre -->
-                <!--
-    <div class="card">
-      <img src="media/trabajo2.jpg" alt="Trabajo 2">
+    <div class="carousel">
+      <发现<button class="carousel-btn prev" aria-label="Anterior">‹</button>
+
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <img src="media/carrusel1.jpg" alt="Trabajo 1">
+        </div>
+        <div class="carousel-slide">
+          <img src="media/carrusel2.jpg" alt="Trabajo 2">
+        </div>
+        <div class="carousel-slide">
+          <img src="media/carrusel3.jpg" alt="Trabajo 3">
+        </div>
+        <div class="carousel-slide">
+          <img src="media/carrusel4.jpg" alt="Trabajo 4">
+        </div>
+      </div>
+
+      <button class="carousel-btn next" aria-label="Siguiente">›</button>
     </div>
-    -->
-            </div>
-        </section>
+  </section>
 
-        <section id="trabajos" class="section">
-            <h2>Trabajos</h2>
-            <p>Algunos de nuestros trabajos recientes.</p>
+  <!-- MATERIALES -->
+  <section id="materiales" class="section dark">
+    <h2>Materiales</h2>
+    <p>Trabajamos con materiales de alta calidad para cada proyecto.</p>
 
-            <div class="grid gallery">
-                <div class="card">
-                    <img src="media/trabajo2.jpg" alt="Trabajo 1">
-                </div>
-                <!-- Si querés agregar más imágenes, copiá este bloque y cambiá el nombre -->
-                <!--
-    <div class="card">
-      <img src="media/trabajo2.jpg" alt="Trabajo 2">
+    <div class="grid materials-grid">
+      <div class="card material-card">
+        <img src="media/img-vinilo.jpg" alt="Vinilo">
+        <span>Vinilo</span>
+      </div>
+      <div class="card material-card">
+        <img src="media/img-acrilico.avif" alt="Acrílico">
+        <span>Acrílico</span>
+      </div>
+      <div class="card material-card">
+        <img src="media/img-lona.jpg" alt="Lona">
+        <span>Lona</span>
+      </div>
+      <div class="card material-card">
+        <img src="media/img-led.jpg" alt="LED">
+        <span>LED</span>
+      </div>
     </div>
-    -->
-            </div>
-        </section>
+  </section>
 
-        <!-- -----------------carrusel------------------------------ -->
+  <!-- CONTACTO -->
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>Escribinos y armamos tu proyecto.</p>
+    <div class="contact-buttons">
+      <a class="btn primary" href="https://wa.me/5493834657842" target="_blank">WhatsApp</a>
+      <a class="btn secondary" href="https://www.instagram.com/conejaproducciones/" target="_blank">Instagram</a>
+    </div>
+  </section>
 
-        <section id="trabajos" class="section">
-            <h2>Trabajos</h2>
-            <p>Algunos de nuestros trabajos recientes.</p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Coneja Producciones</p>
+  </footer>
 
-            <div class="carousel">
-                <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+  <!-- WHATSAPP FLOTANTE -->
+  <a href="https://wa.me/5493834657842" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <img src="media/img-whatsapp2.png" alt="WhatsApp">
+</a>
+  <!-- JS MENÚ -->
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const menuClose = document.querySelector('.menu-close');
 
-                <div class="carousel-track">
-                    <!-- Slide 1 (imagen) -->
-                    <div class="carousel-slide">
-                        <img src="media/carrusel1.jpg" alt="Trabajo 1">
-                    </div>
+    menuBtn.addEventListener('click', () => menuOverlay.classList.add('active'));
+    menuClose.addEventListener('click', () => menuOverlay.classList.remove('active'));
 
-                    <!-- Slide 2 (video) -->
-                    <div class="carousel-slide">
-                        <img src="media/carrusel2.jpg" alt="Trabajo 1">
-                    </div>
-
-                    <!-- Slide 3 (imagen) -->
-                    <div class="carousel-slide">
-                        <img src="media/carrusel3.jpg" alt="Trabajo 2">
-                    </div>
-
-                    <div class="carousel-slide">
-                        <img src="media/carrusel4.jpg" alt="Trabajo 2">
-                    </div>
-
-
-                    <!-- Agregá más slides copiando este bloque y cambiando el archivo -->
-                </div>
-
-                <button class="carousel-btn next" aria-label="Siguiente">›</button>
-            </div>
-        </section>
-
-
-
-
-
-        <!-- --------------------------------------------------------------------------- -->
-
-
-        <!-- MATERIALES -->
-        <section id="materiales" class="section dark">
-            <h2>Materiales</h2>
-            <p>Trabajamos con materiales de alta calidad para cada proyecto.</p>
-
-            <div class="grid materials-grid">
-                <div class="card material-card">
-                    <img src="media/img-vinilo.jpg" alt="Vinilo">
-                    <span>Vinilo</span>
-                </div>
-
-                <div class="card material-card">
-                    <img src="media/img-acrilico.avif" alt="Acrílico">
-                    <span>Acrílico</span>
-                </div>
-
-                <div class="card material-card">
-                    <img src="media/img-lona.jpg" alt="Lona">
-                    <span>Lona</span>
-                </div>
-
-                <div class="card material-card">
-                    <img src="media/img-led.jpg" alt="LED">
-                    <span>LED</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACTO -->
-        <section id="contacto" class="section">
-            <h2>Contacto</h2>
-            <p>Escribinos y armamos tu proyecto.</p>
-            <div class="contact-buttons">
-                <a class="btn primary"
-                    href="https://api.whatsapp.com/send?phone=5493834657842&text=Hola%20Coneja%20Producciones%2C%20quiero%20consultar%20por%20un%20trabajo."
-                    target="_blank">
-                    WhatsApp
-                </a>
-                </a>
-                <a class="btn secondary" href="https://www.instagram.com/conejaproducciones/"
-                    target="_blank">Instagram</a>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <p>© 2026 Coneja Producciones</p>
-        </footer>
-
-        <!-- ----------------------------------------------------------------------------------- -->
-
-        <a href="https://wa.me/5493834657842" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-            <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
-                <path fill="#000"
-                    d="M16.02 2.013c-7.732 0-14.01 6.277-14.01 14.01 0 2.466.64 4.877 1.857 7.003L2 30l7.137-1.872a13.94 13.94 0 0 0 6.883 1.807h.006c7.732 0 14.01-6.277 14.01-14.01S23.752 2.013 16.02 2.013zm8.133 19.723c-.343.964-2.013 1.845-2.772 1.903-.702.055-1.59.078-2.565-.163-.592-.148-1.353-.438-2.332-.86-4.11-1.773-6.8-5.903-7.005-6.176-.204-.273-1.674-2.225-1.674-4.245 0-2.02 1.055-3.014 1.43-3.428.375-.414.82-.518 1.093-.518.273 0 .547.003.787.015.253.012.592-.096.927.707.343.82 1.17 2.832 1.272 3.04.102.204.17.444.034.717-.136.273-.204.444-.409.683-.204.239-.432.534-.615.717-.204.204-.417.426-.179.834.239.409 1.062 1.748 2.28 2.83 1.565 1.393 2.883 1.826 3.292 2.03.409.204.65.17.89-.102.239-.273 1.02-1.19 1.293-1.598.273-.409.547-.341.923-.204.375.136 2.365 1.116 2.77 1.32.409.204.683.307.785.478.102.17.102.99-.239 1.953z" />
-            </svg>
-        </a>
-
-
-
-
-
-        <!-- ------------------------------------------------------------------------------ -->
-
-
-
-
-
-<script>
-  const menuBtn = document.querySelector('.menu-btn');
-  const menuOverlay = document.getElementById('menuOverlay');
-  const menuClose = document.querySelector('.menu-close');
-
-  menuBtn.addEventListener('click', () => {
-    menuOverlay.classList.add('active');
-  });
-
-  menuClose.addEventListener('click', () => {
-    menuOverlay.classList.remove('active');
-  });
-
-  // Cerrar al hacer clic en un link
-  menuOverlay.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      menuOverlay.classList.remove('active');
+    menuOverlay.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => menuOverlay.classList.remove('active'));
     });
-  });
-</script>
+  </script>
 
+  <!-- JS CARRUSEL -->
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
 
+    let index = 0;
 
+    function updateCarousel() {
+      const width = slides[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${index * width}px)`;
+    }
 
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      updateCarousel();
+    });
 
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
 
+    window.addEventListener('resize', updateCarousel);
+  </script>
 
-
-
-
-
-
-
-
-
-
-
-
-        <!-- ------------------------------------------------------------------------------- -->
-        <script>
-            const track = document.querySelector('.carousel-track');
-            const slides = Array.from(document.querySelectorAll('.carousel-slide'));
-            const prevBtn = document.querySelector('.carousel-btn.prev');
-            const nextBtn = document.querySelector('.carousel-btn.next');
-
-            let index = 0;
-
-            function updateCarousel() {
-                const width = slides[0].getBoundingClientRect().width;
-                track.style.transform = `translateX(-${index * width}px)`;
-            }
-
-            nextBtn.addEventListener('click', () => {
-                index = (index + 1) % slides.length;
-                updateCarousel();
-            });
-
-            prevBtn.addEventListener('click', () => {
-                index = (index - 1 + slides.length) % slides.length;
-                updateCarousel();
-            });
-
-            // Ajustar al redimensionar
-            window.addEventListener('resize', updateCarousel);
-        </script>
-
-    </body>
-
-    </html>
+</body>
+</html>
