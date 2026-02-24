@@ -76,7 +76,82 @@
   color: #ffd400;
   transform: translateY(-2px);
 }
+  
 
+
+
+/* ====== CONTENEDOR GENERAL ====== */
+.section {
+  width: 100%;
+  padding: 60px 16px;
+}
+
+/* Limitar ancho en desktop */
+.section,
+.hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ====== HERO RESPONSIVO ====== */
+.hero {
+  height: 100svh; /* mejor que 100vh en móviles */
+}
+
+.hero-content h1 {
+  font-size: clamp(1.6rem, 4vw, 3rem);
+}
+
+.hero-content p {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
+
+/* ====== BOTONES HERO ====== */
+.hero-buttons {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ====== GALERÍA / GRID ====== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+/* ====== IMÁGENES Y VIDEOS ====== */
+.gallery img,
+.gallery video,
+.carousel-slide img,
+.carousel-slide video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;   /* mantiene proporción linda */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ====== MOBILE AJUSTES FINOS ====== */
+@media (max-width: 600px) {
+  .section {
+    padding: 40px 14px;
+  }
+
+  .hero-content {
+    padding: 20px 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+}
 
 
 
