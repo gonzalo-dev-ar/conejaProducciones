@@ -6,25 +6,24 @@
 
   <title>Coneja Producciones | Cartelería y Gráfica en Catamarca</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Coneja Producciones. Cartelería, gráfica y soluciones visuales en Catamarca.">
-  <meta property="og:title" content="Coneja Producciones | Cartelería y Gráfica">
-  <meta property="og:description" content="Cartelería, vinilo, acrílico, lona y LED. Descubrí nuestros trabajos y contactanos.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://gonzalo-dev-ar.github.io/conejaProducciones/">
-  <meta property="og:image" content="https://gonzalo-dev-ar.github.io/conejaProducciones/media/img-logo.png">
-  <meta property="og:image:alt" content="Logo Coneja Producciones">
+ <meta property="og:title" content="Coneja Producciones | Cartelería y Gráfica">
+<meta property="og:description" content="Cartelería, vinilo, acrílico, lona y LED. Descubrí nuestros trabajos y contactanos.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gonzalo-dev-ar.github.io/conejaProducciones/">
+<meta property="og:image" content="https://gonzalo-dev-ar.github.io/conejaProducciones/media/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Coneja Producciones - Cartelería y Gráfica">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Coneja Producciones | Cartelería y Gráfica">
-  <meta name="twitter:description" content="Cartelería, vinilo, acrílico, lona y LED.">
-  <meta name="twitter:image" content="https://gonzalo-dev-ar.github.io/conejaProducciones/media/img-logo.png">
-
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coneja Producciones | Cartelería y Gráfica">
+<meta name="twitter:description" content="Cartelería, vinilo, acrílico, lona y LED.">
+<meta name="twitter:image" content="https://gonzalo-dev-ar.github.io/conejaProducciones/media/preview.jpg">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+<header>
   <!-- BOTÓN MENÚ -->
   <button class="menu-btn" aria-label="Abrir menú">☰</button>
 
@@ -38,9 +37,12 @@
       <a href="#contacto">Contacto</a>
     </nav>
   </div>
+ </header>
 
+ 
+  <main>
   <!-- HERO -->
-  <header class="hero">
+  <section class="hero">
     <video class="hero-video" autoplay muted loop playsinline>
       <source src="media/hero.mp4.1.mp4" type="video/mp4">
       Tu navegador no soporta video.
@@ -56,7 +58,8 @@
         <a href="#contacto" class="btn secondary">Contactanos</a>
       </div>
     </div>
-  </header>
+  </section>
+  
 
   <!-- TRABAJOS / CARRUSEL -->
   <section id="trabajos" class="section">
@@ -64,7 +67,7 @@
     <p>Algunos de nuestros trabajos recientes.</p>
 
     <div class="carousel">
-      <发现<button class="carousel-btn prev" aria-label="Anterior">‹</button>
+      <button class="carousel-btn prev" aria-label="Anterior"></button>
 
       <div class="carousel-track">
         <div class="carousel-slide">
@@ -81,7 +84,7 @@
         </div>
       </div>
 
-      <button class="carousel-btn next" aria-label="Siguiente">›</button>
+      <button class="carousel-btn next" aria-label="Siguiente"></button>
     </div>
   </section>
 
@@ -119,7 +122,7 @@
       <a class="btn secondary" href="https://www.instagram.com/conejaproducciones/" target="_blank">Instagram</a>
     </div>
   </section>
-
+</main>
   <!-- FOOTER -->
   <footer class="footer">
     <p>© 2026 Coneja Producciones</p>
@@ -169,6 +172,6 @@
 
     window.addEventListener('resize', updateCarousel);
   </script>
-
+  
 </body>
 </html>

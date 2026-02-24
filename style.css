@@ -1,41 +1,67 @@
+/* =========================
+   RESET + BASE
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(10, 10, 18);
+  color: rgb(230, 230, 240);
+}
 
+/* =========================
+   HEADER (MENÚ TIPO LOOOP)
+========================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 16px;
+  background: rgba(10, 10, 18, 0.6);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
 
-
-
-
-
-/* ---------------------------------------------------------------- */
-
-
-/* ===== MENÚ TIPO LOOOP ===== */
 .menu-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 5;
   background: transparent;
-  border: 2px solid #ffd400;
-  color: #ffd400;
+  border: 2px solid rgb(255, 212, 0);
+  color: rgb(255, 212, 0);
   width: 44px;
   height: 44px;
   border-radius: 50%;
   font-size: 22px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Overlay menú */
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(5,5,10,0.96);
+  background: rgba(5, 5, 12, 0.96);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .3s ease;
-  z-index: 9998;
+  transition: opacity 0.3s ease;
+  z-index: 2000;
 }
 
 .menu-overlay.active {
@@ -48,13 +74,16 @@
   top: 20px;
   right: 20px;
   background: transparent;
-  border: 2px solid #ffd400;
-  color: #ffd400;
+  border: 2px solid rgb(255, 212, 0);
+  color: rgb(255, 212, 0);
   width: 44px;
   height: 44px;
   border-radius: 50%;
   font-size: 22px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-nav {
@@ -65,124 +94,236 @@
 }
 
 .menu-nav a {
-  font-size: clamp(1.6rem, 4vw, 3rem);
-  color: #fff;
+  font-size: clamp(1.4rem, 5vw, 2.8rem);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   letter-spacing: 1px;
-  transition: color .2s ease, transform .2s ease;
 }
 
 .menu-nav a:hover {
-  color: #ffd400;
-  transform: translateY(-2px);
-}
-  
-
-
-
-/* ====== CONTENEDOR GENERAL ====== */
-.section {
-  width: 100%;
-  padding: 60px 16px;
+  color: rgb(255, 212, 0);
 }
 
-/* Limitar ancho en desktop */
-.section,
-.hero-content {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* ====== HERO RESPONSIVO ====== */
+/* =========================
+   HERO (VIDEO FULLSCREEN)
+========================= */
 .hero {
-  height: 100svh; /* mejor que 100vh en móviles */
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 64px; /* espacio para header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 20px;
+  max-width: 900px;
 }
 
 .hero-content h1 {
-  font-size: clamp(1.6rem, 4vw, 3rem);
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .hero-content p {
-  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  margin-bottom: 24px;
+  opacity: 0.85;
 }
 
-/* ====== BOTONES HERO ====== */
 .hero-buttons {
-  flex-wrap: wrap;
+  display: flex;
+  gap: 14px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* ====== GALERÍA / GRID ====== */
+/* =========================
+   BOTONES
+========================= */
+.btn {
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn.primary {
+  background: rgb(255, 212, 0);
+  color: rgb(0,0,0);
+  box-shadow: 0 0 20px rgba(255, 212, 0, 0.4);
+}
+
+.btn.secondary {
+  border: 2px solid rgb(255, 212, 0);
+  color: rgb(255, 212, 0);
+  background: transparent;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(255, 212, 0, 0.6);
+}
+
+/* =========================
+   SECCIONES
+========================= */
+.section {
+  width: 100%;
+  padding: 60px 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section.dark {
+  background: rgb(15, 15, 25);
+}
+
+.section h2 {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  margin-bottom: 10px;
+}
+
+.section p {
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   GRID (MATERIALES)
+========================= */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: 1fr;
   gap: 16px;
 }
 
-/* ====== IMÁGENES Y VIDEOS ====== */
-.gallery img,
-.gallery video,
-.carousel-slide img,
-.carousel-slide video {
+.material-card img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;   /* mantiene proporción linda */
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.material-card span {
+  display: block;
+  padding: 12px;
+  background: rgb(21,21,34);
+  font-weight: bold;
+}
+
+/* =========================
+   CARRUSEL
+========================= */
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  padding: 0 10px;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 220px;
   object-fit: cover;
   border-radius: 12px;
 }
 
-/* ====== MOBILE AJUSTES FINOS ====== */
-@media (max-width: 600px) {
-  .section {
-    padding: 40px 14px;
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
+}
+
+/* =========================
+   WHATSAPP FLOTANTE
+========================= */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgb(37, 211, 102);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.whatsapp-float img {
+  width: 28px;
+  height: 28px;
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+
+/* Tablet */
+@media (min-width: 768px) {
+  header { height: 70px; }
+  .hero { padding-top: 70px; }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .hero-content {
-    padding: 20px 14px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .carousel-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 20px;
+  .carousel-slide img {
+    height: 280px;
   }
 }
 
+/* Desktop */
+@media (min-width: 1024px) {
+  header { height: 80px; }
+  .hero { padding-top: 80px; }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* -------------------------------------------------------------------- */
-/* Responsive */
-@media (max-width: 768px) {
-  .carousel-slide img,
-  .carousel-slide video {
-    height: 220px;
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
   }
-}
 
-@media (max-width: 480px) {
-  .carousel-slide img,
-  .carousel-slide video {
-    height: 180px;
+  .carousel-slide img {
+    height: 340px;
   }
 }
