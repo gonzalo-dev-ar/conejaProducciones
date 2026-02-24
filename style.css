@@ -144,3 +144,289 @@ body {
   background: #0b0b0f;
   opacity: 0.6;
 }
+
+/* ------------------------------------------------------------- */
+/* GALERÍA */
+.gallery img {
+  width: 100%;
+  height: 220px;      /* altura fija para que no se descontrole */
+  object-fit: cover; /* recorta sin deformar */
+  border-radius: 10px;
+  display: block;
+}
+
+.gallery .card {
+  padding: 0;
+  overflow: hidden;  /* oculta lo que sobra */
+}
+
+.gallery .card:hover img {
+  transform: scale(1.05);
+  transition: transform .3s ease;
+}
+ 
+.gallery img,
+.gallery video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.gallery video {
+  background: #000; /* por si tarda en cargar */
+}
+
+
+/* ---------------------------------------------------- */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .gallery img {
+    height: 180px; /* un poco más chico en celular */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .gallery img {
+    height: 160px;
+  }
+}
+
+/* ===== CARRUSEL ===== */
+.carousel {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  padding: 0 10px;
+}
+
+.carousel-slide img,
+.carousel-slide video {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  background: #000;
+}
+
+/* Botones */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  border: 2px solid #ffd400;
+  color: #ffd400;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 36px;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.85);
+}
+
+/* ----------------------------------------------------------------------- */
+/* ===== MATERIALES ===== */
+.materials-grid {
+  margin-top: 30px;
+}
+
+.material-card {
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.material-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.material-card span {
+  display: block;
+  padding: 12px;
+  background: #151522;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.material-card:hover img {
+  transform: scale(1.05);
+  transition: transform .3s ease;
+}
+/* ----------------------------------------------------------------- */
+/* ===== WHATSAPP FLOTANTE ===== */
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  color: #000;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  z-index: 9999;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.6);
+}
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+
+
+/* ===== MENÚ TIPO LOOOP ===== */
+.menu-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  background: transparent;
+  border: 2px solid #ffd400;
+  color: #ffd400;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5,5,10,0.96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+  z-index: 9998;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: 2px solid #ffd400;
+  color: #ffd400;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.menu-nav a {
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.menu-nav a:hover {
+  color: #ffd400;
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------- */
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-slide img,
+  .carousel-slide video {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide img,
+  .carousel-slide video {
+    height: 180px;
+  }
+}
